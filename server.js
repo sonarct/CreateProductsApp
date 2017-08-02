@@ -1,6 +1,6 @@
 const express = require('express')
 const path = require('path')
-const port = process.env.port || 80
+const port = process.env.port || 3000
 const bodyParser = require('body-parser')
 const fs = require('fs')
 
