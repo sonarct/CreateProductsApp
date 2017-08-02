@@ -9,10 +9,6 @@ const products = './products.json'
 
 app.use('/', express.static(path.join(__dirname, 'build')))
 
-// app.get('/', (req, res) => {
-//   res.status(200).send('Main page')
-// })
-
 app.listen(port, () => {
   console.log('express is listening on ' + port)
 })

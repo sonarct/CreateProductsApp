@@ -61,9 +61,7 @@ class App extends Component {
       }
 
       return (
-        <ListGroupItem
-          bsStyle={color}
-          key={i} >
+        <ListGroupItem bsStyle={color} key={i} >
           <div>
             {product.name}
           </ div>
