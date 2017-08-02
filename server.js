@@ -9,6 +9,23 @@ const products = './products.json'
 
 app.use('/', express.static(path.join(__dirname, 'build')))
 
+app.get('/', (req, res) => {
+  let options = {
+    root: __dirname,
+    dotfiles: 'deny',
+    headers: {
+        'x-timestamp': Date.now(),
+        'x-sent': true
+    }
+  }
+  res.sendFile('index.html', options, (err) => {
+    if (err) next(err)
+    else {
+      console.log('sent')
+    }
+  })
+})
+
 app.listen(port, () => {
   console.log('express is listening on ' + port)
 })
