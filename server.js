@@ -19,7 +19,7 @@ app.use(bodyParser.json())
 app.get('/products', (req, res) => {
   fs.readFile(products, 'utf8', (err, data) => {
     if (err) return res.status(500).send('There was a problem with getting products')
-    res.status(200).send('ok')
+    res.status(200).send(data)
   })
 })
 
